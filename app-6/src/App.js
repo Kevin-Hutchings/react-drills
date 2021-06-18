@@ -12,6 +12,7 @@ export default class App extends Component{
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleChange(e){
@@ -45,7 +46,7 @@ export default class App extends Component{
         <h1>My to-do list:</h1>
         <input value={this.state.toDo} onChange={(e) => this.handleChange(e)}/>
         <button onClick={this.handleClick}> Add </button>
-        <button className="confirmationButton" onClick={() => this.handleReset()}>clear</button>
+        <button onClick={() => this.handleReset()}>clear</button>
         <ul>
           {listDisplay}
         </ul>
